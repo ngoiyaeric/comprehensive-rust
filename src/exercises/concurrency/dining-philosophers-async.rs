@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// ANCHOR: solution
 // ANCHOR: Philosopher
 use std::sync::Arc;
-use tokio::time;
 use tokio::sync::mpsc::{self, Sender};
 use tokio::sync::Mutex;
+use tokio::time;
 
 struct Fork;
 
@@ -32,7 +33,8 @@ struct Philosopher {
 impl Philosopher {
     async fn think(&self) {
         self.thoughts
-            .send(format!("Eureka! {} has a new idea!", &self.name)).await
+            .send(format!("Eureka! {} has a new idea!", &self.name))
+            .await
             .unwrap();
     }
     // ANCHOR_END: Philosopher-think
@@ -58,7 +60,7 @@ impl Philosopher {
 }
 
 static PHILOSOPHERS: &[&str] =
-    &["Socrates", "Plato", "Aristotle", "Thales", "Pythagoras"];
+    &["Socrates", "Hypatia", "Plato", "Aristotle", "Pythagoras"];
 
 #[tokio::main]
 async fn main() {
@@ -77,7 +79,7 @@ async fn main() {
             // To avoid a deadlock, we have to break the symmetry
             // somewhere. This will swap the forks without deinitializing
             // either of them.
-            if i  == 0 {
+            if i == 0 {
                 std::mem::swap(&mut left_fork, &mut right_fork);
             }
             philosophers.push(Philosopher {
@@ -99,7 +101,6 @@ async fn main() {
                 phil.eat().await;
             }
         });
-
     }
 
     // Output their thoughts

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// ANCHOR: solution
 // ANCHOR: Philosopher
 use std::sync::{mpsc, Arc, Mutex};
 use std::thread;
@@ -40,8 +41,8 @@ impl Philosopher {
     fn eat(&self) {
         // ANCHOR_END: Philosopher-eat
         println!("{} is trying to eat", &self.name);
-        let left = self.left_fork.lock().unwrap();
-        let right = self.right_fork.lock().unwrap();
+        let _left = self.left_fork.lock().unwrap();
+        let _right = self.right_fork.lock().unwrap();
 
         // ANCHOR: Philosopher-eat-end
         println!("{} is eating...", &self.name);
@@ -50,7 +51,7 @@ impl Philosopher {
 }
 
 static PHILOSOPHERS: &[&str] =
-    &["Socrates", "Plato", "Aristotle", "Thales", "Pythagoras"];
+    &["Socrates", "Hypatia", "Plato", "Aristotle", "Pythagoras"];
 
 fn main() {
     // ANCHOR_END: Philosopher-eat-end

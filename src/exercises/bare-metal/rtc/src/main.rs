@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// ANCHOR: solution
 // ANCHOR: top
 #![no_main]
 #![no_std]
@@ -81,10 +82,7 @@ extern "C" fn main(x0: u64, x1: u64, x2: u64, x3: u64) {
     // Wait for 3 seconds, without interrupts.
     let target = timestamp + 3;
     rtc.set_match(target);
-    info!(
-        "Waiting for {}",
-        Utc.timestamp_opt(target.into(), 0).unwrap()
-    );
+    info!("Waiting for {}", Utc.timestamp_opt(target.into(), 0).unwrap());
     trace!(
         "matched={}, interrupt_pending={}",
         rtc.matched(),
@@ -102,10 +100,7 @@ extern "C" fn main(x0: u64, x1: u64, x2: u64, x3: u64) {
 
     // Wait another 3 seconds for an interrupt.
     let target = timestamp + 6;
-    info!(
-        "Waiting for {}",
-        Utc.timestamp_opt(target.into(), 0).unwrap()
-    );
+    info!("Waiting for {}", Utc.timestamp_opt(target.into(), 0).unwrap());
     rtc.set_match(target);
     rtc.clear_interrupt();
     rtc.enable_interrupt(true);

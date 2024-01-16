@@ -7,9 +7,10 @@
 This repository has the source code for Comprehensive Rust 🦀, a multi-day Rust
 course developed by the Android team. The course covers all aspects of Rust,
 from basic syntax to generics and error handling. It also includes deep dives on
-[Android], [bare-metal], and [concurrency].
+[Android], [Chromium], [bare-metal], and [concurrency].
 
 [Android]: https://google.github.io/comprehensive-rust/android.html
+[Chromium]: https://google.github.io/comprehensive-rust/comprehensive.html
 [bare-metal]: https://google.github.io/comprehensive-rust/bare-metal.html
 [concurrency]: https://google.github.io/comprehensive-rust/concurrency.html
 
@@ -28,6 +29,20 @@ trigger when going through the code samples. We hope to improve on this via
 [speaker notes](https://github.com/google/comprehensive-rust/issues/53) and by
 [publishing videos](https://github.com/google/comprehensive-rust/issues/52).
 
+## Press
+
+Articles and blog posts from around the web which cover Comprehensive Rust:
+
+- 2023-09-08:
+  _[Teaching Rust in 5 days](https://mo8it.com/blog/teaching-rust/)_.
+  Comprehensive Rust was used as a base for a 5-day university class on Rust.
+- 2023-09-21:
+  _[Scaling Rust Adoption Through Training](https://security.googleblog.com/2023/09/scaling-rust-adoption-through-training.html)_.
+  We published a blog post with details on the development of the course.
+- 2023-10-02:
+  _[In Search of Rust Developers, Companies Turn to In-House Training](https://www.darkreading.com/application-security/google-microsoft-take-refuge-in-rust-languages-better-security)_.
+  About how Microsoft, Google, and others are training people in Rust.
+
 ## Building
 
 The course is built using a few tools:
@@ -36,6 +51,7 @@ The course is built using a few tools:
 - [mdbook-svgbob](https://github.com/boozook/mdbook-svgbob)
 - [mdbook-i18n-helpers](https://github.com/google/mdbook-i18n-helpers)
 - [mdbook-exerciser](mdbook-exerciser/)
+- [mdbook-course](mdbook-course/)
 
 First install Rust by following the instructions on https://rustup.rs/. Then
 clone this repository:
@@ -52,6 +68,7 @@ cargo install mdbook
 cargo install mdbook-svgbob
 cargo install mdbook-i18n-helpers
 cargo install --path mdbook-exerciser
+cargo install --path mdbook-course
 ```
 
 Run

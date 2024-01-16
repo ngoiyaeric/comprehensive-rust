@@ -1,47 +1,79 @@
 translation:
-- po/**
+  - changed-files:
+      - any-glob-to-any-file: po/*.po
 
-'translation/bn':
-- po/bn.po
+"translation/bn":
+  - changed-files:
+      - any-glob-to-any-file: po/bn.po
 
-'translation/da':
-- po/da.po
+"translation/da":
+  - changed-files:
+      - any-glob-to-any-file: po/da.po
 
-'translation/de':
-- po/de.po
+"translation/de":
+  - changed-files:
+      - any-glob-to-any-file: po/de.po
 
-'translation/el':
-- po/el.po
+"translation/el":
+  - changed-files:
+      - any-glob-to-any-file: po/el.po
 
-'translation/es':
-- po/es.po
+"translation/es":
+  - changed-files:
+      - any-glob-to-any-file: po/es.po
 
-'translation/fr':
-- po/fr.po
+"translation/fa":
+  - changed-files:
+      - any-glob-to-any-file: po/fa.po
 
-'translation/id':
-- po/id.po
+"translation/fr":
+  - changed-files:
+      - any-glob-to-any-file: po/fr.po
 
-'translation/it':
-- po/it.po
+"translation/id":
+  - changed-files:
+      - any-glob-to-any-file: po/id.po
 
-'translation/ja':
-- po/ja.po
+"translation/it":
+  - changed-files:
+      - any-glob-to-any-file: po/it.po
 
-'translation/ko':
-- po/ko.po
+"translation/ja":
+  - changed-files:
+      - any-glob-to-any-file: po/ja.po
 
-'translation/pt-BR':
-- po/pt-BR.po
+"translation/ko":
+  - changed-files:
+      - any-glob-to-any-file: po/ko.po
 
-'translation/ru':
-- po/ru.po
+"translation/pl":
+  - changed-files:
+      - any-glob-to-any-file: po/pl.po
 
-'translation/tr':
-- po/tr.po
+"translation/pt-BR":
+  - changed-files:
+      - any-glob-to-any-file: po/pt-BR.po
 
-'translation/zh-CN':
-- po/zh-CN.po
+"translation/ro":
+  - changed-files:
+      - any-glob-to-any-file: po/ro.po
 
-'translation/zh-TW':
-- po/zh-TW.po
+"translation/ru":
+  - changed-files:
+      - any-glob-to-any-file: po/ru.po
+
+"translation/tr":
+  - changed-files:
+      - any-glob-to-any-file: po/tr.po
+
+"translation/uk":
+  - changed-files:
+      - any-glob-to-any-file: po/uk.po
+
+"translation/zh-CN":
+  - changed-files:
+      - any-glob-to-any-file: po/zh-CN.po
+
+"translation/zh-TW":
+  - changed-files:
+      - any-glob-to-any-file: po/zh-TW.po
